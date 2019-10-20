@@ -1,0 +1,65 @@
+variables:
+
+options:
+	a: tlb.tablist
+
+	b: &e&m---=<==|&6&l Vapor Network &e&m|==>=---
+	c: &6&m-------------------------------------
+
+	d: &6&m-------------------------------------
+	e: &7Website: &evapornetwork.xyz
+	f: &7Discord: &edc.vapornetwork.xyz
+	g: &7Store: &estore.vapornetwork.xyz
+	h: &0
+
+	i: TLB.sk
+
+command /tlb [<text>]:
+	usage: &c/tlb <reload>
+	permission: {@a}
+	trigger:
+		if arg 1 is not set:
+			send "&6&lTLB &8▏ &7by &9iMPDevMC"
+			send "&8➟ &7/tlb <reload>"
+		if arg 1 is set:
+			send "&6&lTLB &8➟ &7Reloading..."
+			make the player execute "/sk reload {@i}"
+			send "&6&lTLB &8➟ &aTLB successfully reloaded"
+			stop 
+
+every 10 seconds:
+	loop all players:
+		set loop player's tab header to "{@b} %nl% {@c}" and footer to "%nl% {@d} %nl% {@e} %nl% {@f} %nl% {@g} %nl% &1" 
+
+
+#! Exemple of animated tablist:
+
+#options:
+#	a: &f&lVapor
+#	b: &e&lV&f&lapor
+#	c: &f&lV&e&la&f&lpor
+#	d: &f&lVa&e&lp&f&lor
+#	e: &f&lVap&e&lo&f&lr
+#	f: &f&lVapo&e&lr
+#
+#	g: &7Store: &estore.exemple.com
+#	h: &7Website: &eexemple.com
+#	i: &7Discord: &ediscord.exemple.com
+#
+#	j: &8&m----------------------------
+#
+#every 10 seconds:
+#	loop all players:
+#		set loop-player's tab header to "{@a} %nl% {@j}" with footer " %nl% {@g} %nl% {@h} %nl% {@i} %nl% &1"
+#		wait 3 ticks
+#		set loop-player's tab header to "{@b} %nl% {@j}" with footer " %nl% {@g} %nl% {@h} %nl% {@i} %nl% &1"
+#		wait 3 ticks
+#		set loop-player's tab header to "{@c} %nl% {@j}" with footer " %nl% {@g} %nl% {@h} %nl% {@i} %nl% &1"
+#		wait 3 ticks
+#		set loop-player's tab header to "{@d} %nl% {@j}" with footer " %nl% {@g} %nl% {@h} %nl% {@i} %nl% &1"
+#		wait 3 ticks 
+#		set loop-player's tab header to "{@e} %nl% {@j}" with footer " %nl% {@g} %nl% {@h} %nl% {@i} %nl% &1"
+#		wait 3 ticks
+#		set loop-player's tab header to "{@f} %nl% {@j}" with footer " %nl% {@g} %nl% {@h} %nl% {@i} %nl% &1"
+#		wait 3 ticks
+#		set loop-player's tab header to "{@a} %nl% {@j}" with footer " %nl% {@g} %nl% {@h} %nl% {@i} %nl% &1"
